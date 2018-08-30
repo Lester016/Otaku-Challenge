@@ -1,2 +1,2 @@
 # Otaku-Challenge
-This is an undone project(game). For testing only
+This is an undone project(game). For practice only
