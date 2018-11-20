@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WordGuess - Lester</title>
+	<!-- Font Family -->
+	<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="WordGuess.css">
+	<!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="background">
+		<!-- Start of first page -->
+		<div id="first-page">
+			<h1>Otaku Challenge</h1>
+			<div id="play-button">
+				<img src="play-button.png" onclick="nextPage();">
+			</div>
+			<div>
+				<p>Made by Lester De Guzman</p>
+				<div class="icons">
+		            <a href="https://www.facebook.com/achep.16" target="_blank"><i class="fa fa-facebook-square"></i></a>
+		            <a href="https://www.linkedin.com/in/lester-de-guzman-29618315a/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+		            <a href="https://github.com/Lester016" target="_blank"><i class="fa fa-github"></i></a>
+		            <a href="https://twitter.com/xLesterD" target="_blank"><i class="fa fa-twitter"></i></a>
+		            <a href="https://dribbble.com/lester016" target="_blank"><i class="fa fa-dribbble"></i></a>
+		        </div>
+			</div>
+		</div>
+		<!-- End of first page -->
+		
+		<!-- Start of second page -->
+		<div id="second-page">
+			<h1>Choose mode</h1>
+			<div id="game-mode-container">
+				<div class="img-container">
+				  	<img src="second-page/onepiece.jpg" alt="Avatar" class="image">
+				  	<div class="middle">
+				    	<div class="text" onclick="guessPicPageReveal()">Start</div>
+					  </div>
+				</div>
+				<div class="img-container">
+				  	<img src="guessPic-page\onepiece\soon.png" alt="Avatar" class="image" style="width: 400px; height: 300px;">
+				  	<div class="middle">
+				    	<div class="text">Start</div>
+				  	</div>
+				</div>
+				<div class="img-container">
+				  	<img src="guessPic-page\onepiece\soon.png" alt="Avatar" class="image" style="width: 300px; height: 400px;">
+				  	<div class="middle">
+				    	<div class="text">Start</div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of second page -->
+
+		<!-- Start of guessPic page -->
+		<div id="guessPic-page">
+			<h1>Guess the anime character</h1>
+			<div class="stars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+				<img src="gray-stars.png" alt="stars" class="unfilledStars">
+			</div>
+			
+			<div id="back-button">
+				<img src="back-button.png" alt="back" onclick="backButton()">
+			</div>
+			<p id="level-indicator">Level <span id="wew">1</span></p>
+			<div class="guess-pic">
+				<div class="questions">
+					<img src="guessPic-page\onepiece\luffy1.jpg">
+					<img src="guessPic-page\onepiece\luffy2.jpg">
+					<br>
+					<img src="guessPic-page\onepiece\luffy3.jpg">
+					<img src="guessPic-page\onepiece\luffy4.jpg">
+				</div>
+				<div class="questions">
+					<img src="guessPic-page\onepiece\zorro1.jpg">
+					<img src="guessPic-page\onepiece\zorro2.jpg">
+					<br>
+					<img src="guessPic-page\onepiece\zorro3.jpg">
+					<img src="guessPic-page\onepiece\zorro4.jpg">
+				</div>
+				<div class="questions">
+					<img src="guessPic-page\onepiece\sanji1.jpg">
+					<img src="guessPic-page\onepiece\sanji2.jpg">
+					<br>
+					<img src="guessPic-page\onepiece\sanji3.jpg">
+					<img src="guessPic-page\onepiece\sanji4.jpg">
+				</div>
+				<div class="questions">
+					<img src="guessPic-page\onepiece\usopp1.jpg">
+					<img src="guessPic-page\onepiece\usopp2.jpg">
+					<br>
+					<img src="guessPic-page\onepiece\usopp3.jpg">
+					<img src="guessPic-page\onepiece\usopp4.jpg">
+				</div>
+				<div class="questions">
+					<img src="guessPic-page\onepiece\robin1.jpg">
+					<img src="guessPic-page\onepiece\robin2.jpg">
+					<br>
+					<img src="guessPic-page\onepiece\robin3.jpg">
+					<img src="guessPic-page\onepiece\robin4.jpg">
+				</div>
+				<div class="questions">
+					<img src="guessPic-page\onepiece\soon.png">
+					<img src="guessPic-page\onepiece\soon.png">
+					<br>
+					<img src="guessPic-page\onepiece\soon.png">
+					<img src="guessPic-page\onepiece\soon.png">
+				</div>
+				
+			</div>
+			<div class="input unselectable">
+				<p class="guess">_</p>
+				<p class="guess">_</p>
+				<p class="guess">_</p>
+				<p class="guess">_</p>
+				<p class="guess">_</p>
+				<p onclick="clearer()" id="clearer"><img src="delete.png" alt="Clear" style="width:35px; height:30px"></p>
+			</div>
+			<div id="meow">
+				<h2>CORRECT!</h2>
+			</div>
+			
+			<div class="choices unselectable">
+				<p class="choice" onclick="myFunction(0)">L</p>
+				<p class="choice" onclick="myFunction(1)">F</p>
+				<p class="choice" onclick="myFunction(2)">Z</p>
+				<p class="choice" onclick="myFunction(3)">D</p>
+				<p class="choice" onclick="myFunction(4)">U</p>
+				<br>
+				<p class="choice" onclick="myFunction(5)">Y</p>
+				<p class="choice" onclick="myFunction(6)">F</p>
+				<p class="choice" onclick="myFunction(7)">P</p>
+				<p class="choice" onclick="myFunction(8)">O</p>
+                <p class="choice" onclick="myFunction(9)">K</p>
+                
+			</div>
+			<script>
+				// Play
+                function nextPage() {
+	                document.getElementById('first-page').style.display = "none";
+                    secondPageReveal();
+				}
+				// Choose Mode
+                function secondPageReveal() {
+                    document.getElementById('second-page').style.display = "block";
+				} 
+				// Start
+                function guessPicPageReveal() {
+                    document.getElementById('guessPic-page').style.display = "block";
+					secondPageHide();
+					
+                }
+                function secondPageHide() {
+                    document.getElementById('second-page').style.display = "none";
+				}
+				function backButton() {
+					document.getElementById('second-page').style.display = "block";
+					document.getElementById('guessPic-page').style.display = "none";
+				}
+				
+				var answers = ["LUFFY", "ZORRO", "SANJI", "USOPP", "ROBIN"];
+				var randomizer = (Math.floor(Math.random() * 5));
+				var levels = 0;
+				var arrcount = 0;
+				var a0,a1,a2,a3,a4, sum;
+				// for loop
+				var i;
+				var arrChoice = document.getElementsByClassName('choice');
+				var arrGuess = document.getElementsByClassName('guess');
+				
+				// If correct fill stars
+				document.getElementsByClassName('unfilledStars')[0].src = "stars.png";
+				function fillStar(){
+					document.getElementsByClassName('unfilledStars')[levels+1].src = "stars.png";
+				}
+				answerGenerator(answers[0]);
+				// distinguish the chosen answers
+				function guess(){
+					a0 = arrGuess[0].innerHTML;
+					a1 = arrGuess[1].innerHTML;
+					a2 = arrGuess[2].innerHTML;
+					a3 = arrGuess[3].innerHTML;
+					a4 = arrGuess[4].innerHTML;
+					return sum = a0+a1+a2+a3+a4;
+				}
+				// random answer + add the random strings
+				function answerGenerator(ans){
+					var shuffledWord = '';
+					var newSW = '';
+					var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+					ans = ans.split('');
+					while (ans.length > 0) {
+					shuffledWord += ans.splice(ans.length * Math.random() << 0, 1);
+					}
+					for(var z = 0; z <= 4; z++){
+						shuffledWord += possible.charAt(Math.floor(Math.random() * possible.length));
+					}
+					shuffledWord = shuffledWord.split('');
+					while (shuffledWord.length > 0) {
+						newSW += shuffledWord.splice(shuffledWord.length * Math.random() << 0, 1);
+					}
+					for (ii = 0; ii <= newSW.length; ii++){
+						arrChoice[ii].innerHTML = newSW[ii];
+					}
+					alert(newSW);
+				}
+				
+				// show next image
+				function showQuestions(){
+					document.getElementsByClassName('questions')[levels].style.display = 'block';
+					arrcount = 0;
+					answerGenerator(answers[levels]);
+					
+				}
+				function hideQuestions(){
+					document.getElementsByClassName('questions')[levels].style.display = 'none';
+					for (hi = 0; hi < answers.length; hi++){
+						arrGuess[hi].innerHTML = "_";
+					}
+					for (hey = 0; hey < arrChoice.length; hey++){
+						arrChoice[hey].style.visibility = "visible";
+					}
+					document.getElementById('wew').innerHTML = levels+2;
+					fillStar();
+				}
+				
+				function inc(){
+					arrcount++;
+				}
+				function clearer(){
+					for (q = 0; q < arrChoice.length; q++){
+						arrChoice[q].style.visibility = "visible";
+					}
+					for (qq = 0; qq < arrGuess.length; qq++){
+						arrGuess[qq].innerHTML = "_";
+					}
+					arrcount = 0;
+				}
+				// onclick choices
+				function myFunction(a){
+					var chosen = arrChoice[a];
+					arrGuess[arrcount].innerHTML = chosen.innerHTML;
+					chosen.style.visibility = "hidden";
+					inc();
+					guess();
+					anotherFunction();
+				}
+				// if correct
+				function anotherFunction(){
+					for(i = 0; i < answers.length; i++){
+						if (sum == answers[i]) {
+							hideQuestions();
+							levels++;
+							showQuestions();
+						}
+					}
+				}
+						
+				</script>
+		</div>
+
+		
+	</div>
+</body>
+</html>
