@@ -1,5 +1,5 @@
 # Otaku-Challenge
-This is an undone project(game). For practice only
+This is an undone project(game) built in HTML,CSS, and Vanilla JS! For practice only
 
 ### Link for the actual website: http://lestergames.tk/
 
